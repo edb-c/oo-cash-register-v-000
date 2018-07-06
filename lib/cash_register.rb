@@ -32,10 +32,10 @@ class CashRegister
     @items = []
   end
   
-  #def total
-  #  @total
-  #  puts "The Current Total is $#{@total}." 
-  #end
+  def total
+    @total
+    puts "The Current Total is $#{@total}." 
+  end
 
   def add_item(item, price, quantity = 1)
     @sub_total = price * quantity
