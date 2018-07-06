@@ -40,9 +40,14 @@ class CashRegister
   def add_item(item, price, quantity = 1)
     @sub_total = price * quantity
     @total += @sub_total
-    @items << item
-    puts "The #{quantity} #{item} costs $#{@sub_total}."
-       
+      if quantity > 1
+        while quantity > 0
+         @items << item
+         quantity -= 1
+        end
+      elsif
+        @items << item
+    end
   end
 
   def apply_discount
