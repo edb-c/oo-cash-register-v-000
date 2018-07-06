@@ -28,7 +28,6 @@ class CashRegister
   def initialize(discount = 0)
     @total = 0
     @discount = discount 
-    #puts @discount
     @items = []
   end
   
@@ -66,8 +65,8 @@ class CashRegister
   end   
 
   def void_last_transaction
-    puts "v The Current Total is $#{@total}." 
-    puts "v The Subtotal is $#{@sub_total}." 
+    #puts "The Current Total is $#{@total}." 
+    #puts "The Subtotal is $#{@sub_total}." 
     @total -= @sub_total
   end
 
