@@ -31,6 +31,7 @@ class CashRegister
     @items = []
   end
   
+  #not needed using attr_accessor
   #def total
    # return @total
   #  puts "The Current Total is $#{@total}." 
@@ -83,4 +84,4 @@ class CashRegister
   #cash_register_with_discount.items 
   #cash_register_with_discount.void_last_transaction
 cash_register = CashRegister.new(10)
-puts cash_register.discount
+puts cash_register.price
