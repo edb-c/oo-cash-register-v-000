@@ -82,4 +82,5 @@ class CashRegister
   #cash_register_with_discount.total
   #cash_register_with_discount.items 
   #cash_register_with_discount.void_last_transaction
-
+cash_register = CashRegister.new
+cash_register.discount
