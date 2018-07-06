@@ -33,7 +33,7 @@ class CashRegister
   end
   
   def total
-    @total
+    self.total
     puts "The Current Total is $#{@total}." 
   end
 
