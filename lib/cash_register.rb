@@ -39,7 +39,8 @@ class CashRegister
 
   def add_item(item, price, quantity = 1)
     @sub_total = price * quantity
-    @total += @sub_total
+
+    self.total += @sub_total
       if quantity > 1
         while quantity > 0
          @items << item
@@ -53,8 +54,8 @@ class CashRegister
   def apply_discount
 
     if @discount > 0
-      @discount_amount = (@total * @discount)/100
-      @total -= @discount_amount
+      @discount_amount = (self.total * @discount)/100
+      self.total -= @discount_amount
       return "After the discount, the total comes to $#{@total}."
     else
       return "There is no discount to apply."
@@ -68,7 +69,7 @@ class CashRegister
   def void_last_transaction
     #puts "The Current Total is $#{@total}." 
     #puts "The Subtotal is $#{@sub_total}." 
-    @total -= @sub_total
+    self.total -= @sub_total
   end
 
   end #end class
@@ -76,12 +77,12 @@ class CashRegister
   #Testing
 
   #cash_register = CashRegister.new
-  #cash_register_with_discount = CashRegister.new(10)
-  #cash_register_with_discount.add_item("milk", 5.00, 3)
-  #cash_register_with_discount.add_item("juice", 3.00, 2)
+  cash_register_with_discount = CashRegister.new(10)
+  cash_register_with_discount.add_item("milk", 5.00, 3)
+  cash_register_with_discount.add_item("juice", 3.00, 2)
   #cash_register_with_discount.apply_discount
-  #cash_register_with_discount.total
+  cash_register_with_discount.total
   #cash_register_with_discount.items 
   #cash_register_with_discount.void_last_transaction
-cash_register = CashRegister.new(10)
-puts cash_register.discount
+  #cash_register = CashRegister.new(10)
+  #puts cash_register.discount
